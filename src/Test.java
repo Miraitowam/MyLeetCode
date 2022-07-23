@@ -27,10 +27,6 @@ public class Test {
         return false;
     }
 
-    public int candy (int[] arr){
-
-    }
-
     @org.junit.Test
     public void test() {
         int[][] matrix = {
