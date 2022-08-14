@@ -24,7 +24,7 @@ public class Test15 {
         return Math.max(solution1, solution2);
     }
 
-    //手写个快排序
+    //手写个快速排序
     public void quickSort(int[] nums, int startPos, int endPos) {
         int leftIndex = startPos, rightIndex = endPos;   //参与循环的左右指针
         int pivot = nums[(startPos + endPos) / 2];      //基准值
