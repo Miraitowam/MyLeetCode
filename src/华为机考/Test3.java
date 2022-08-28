@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Scanner;
 
 /**
  * @description:
@@ -37,9 +38,30 @@ public class Test3 {
         return ans;
     }
 
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String[] s = in.nextLine().split(" ");
+        int k = Integer.parseInt(s[0]);
+        int n = Integer.parseInt(s[1]);
+        int[][] nums = new int[n][n];
+        int count = 0;
+        for (int j = 0; j < n; j++) {
+            String[] s1 = in.nextLine().split(",");
+            for (int i = 0; i < n; i++) nums[count][i] = Integer.parseInt(s1[i]);
+            count++;
+        }
+        System.out.println(findTarget(nums, k));
+    }
+
+    public static int findTarget(int[][] nums, int k) {
+        return 0;
+    }
+
     @Test
     public void test() {
         int[] nums = {8308, 8308, 830};
-        System.out.println(largestNumber(nums));
+        Scanner in = new Scanner(System.in);
+        while (in.hasNextLine())
+            System.out.println(largestNumber(nums));
     }
 }
