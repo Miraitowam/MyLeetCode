@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class Test1 {
     public static List<Integer> diffWaysToCompute(String expression) {
-        ArrayList<Integer> res = new ArrayList<>();
+        List<Integer> res = new ArrayList<>();
         for (int i = 0; i < expression.length(); i++) {
             char c = expression.charAt(i);
             if (c == '-' || c == '+' || c == '*') {     //出现运算符号，递归求解前半段和后半段

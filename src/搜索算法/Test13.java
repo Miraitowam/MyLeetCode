@@ -27,6 +27,7 @@ public class Test13 {
         //返回结果
         return res;
     }
+
     //回溯法求解
     private void backTracing(List<List<Integer>> res, List<Integer> tempRes, int[] nums, boolean[] isVisited, int index) {
         //定义返回的条件：1.index达到nums的长度
@@ -55,7 +56,7 @@ public class Test13 {
 
     @Test
     public void test() {
-        int[] nums = {1,1,2};
+        int[] nums = {1, 1, 2};
         System.out.println(permute(nums));
     }
 }

@@ -44,9 +44,9 @@ public class Test9 {
         String keys = keyMap[curNum - '0'];
         for (int i = 0; i < keys.length(); i++) {
             comBob.append(keys.charAt(i));
-            findCombination(digits, index+1, comBob);
+            findCombination(digits, index + 1, comBob);
             //清空StringBuffer
-            comBob.deleteCharAt(comBob.length()-1);
+            comBob.deleteCharAt(comBob.length() - 1);
         }
         return;
     }

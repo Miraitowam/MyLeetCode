@@ -53,6 +53,6 @@ public class Test11 {
 
     @Test
     public void test() {
-        System.out.println(numSquares(100));
+        System.out.println(numSquares(13));
     }
 }

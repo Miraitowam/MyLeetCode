@@ -3,13 +3,13 @@ package 树;
 
 //Definition for singly-linked list.
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
     ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
@@ -27,5 +27,14 @@ public class ListNode {
             cur = cur.next;
         }
         return head;
+    }
+
+    //打印链表
+    public static void printNodes(ListNode head) {
+        ListNode cur = head;
+        while (cur != null) {
+            System.out.print(cur.val + " ");
+            cur = cur.next;
+        }
     }
 }

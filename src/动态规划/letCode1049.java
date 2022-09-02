@@ -58,7 +58,7 @@ public class letCode1049 {
     public void test() {
         int[] stones = {31, 26, 33, 21, 40};    //5
         int[] stones1 = {2, 7, 4};    //1
-        System.out.println(lastStoneWeight(stones));
-        System.out.println(lastStoneWeight(stones1));
+        System.out.println(lastStoneWeightII(stones));
+//        System.out.println(lastStoneWeight(stones1));
     }
 }

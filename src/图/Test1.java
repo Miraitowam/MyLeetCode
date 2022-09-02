@@ -28,17 +28,18 @@ import java.util.Arrays;
  * 如示例1，没有办法按照双色问题的标准染色，所以不是二分图；示例2可以将[0,2]染颜色A，[1,3]染颜色B，所以是二分图。
  */
 public class Test1 {
-    public boolean isBipartite(int[][] graph) {
+    public int isBipartite(int[][] graph) {
         //创建颜色数组，由于图的表示用的是连接数
         int[] colors = new int[graph.length];
         //初始我们给所有的点都涂成一个颜色，用-1表示
         Arrays.fill(colors, -1);
+        int res = 0;
         for (int i = 0; i < graph.length; i++) {
             //如果当前点标记为-1，就用dfs以当前节点进行遍历，走过一个节点就换个颜色标记，最后检查每条边两端颜色是否不同
             if (colors[i] == -1 && !traverse(i, 0, colors, graph))
-                return false;
+                ;
         }
-        return true;
+        return res;
     }
 
     //dfs进行遍历标记
@@ -60,7 +61,7 @@ public class Test1 {
 
     @Test
     public void test() {
-        int[][] graph = {{1, 3}, {0, 2}, {1, 3}, {0, 2}};
+        int[][] graph = {{1}, {1,3}, {2,4}, {3,5}, {4,6}, {5,7},{6}};
         System.out.println(isBipartite(graph));
     }
 }

@@ -1,5 +1,7 @@
 package 华为机考;
 
+import org.junit.Test;
+
 public class Test18 {
     public int findLengthOfLCIS(int[] nums) {
         if (nums.length == 1) return 1;
@@ -12,5 +14,25 @@ public class Test18 {
             res = Math.max(res, dp[i]);
         }
         return res;
+    }
+
+    public int maxArea(int[] height) {
+        int res = Integer.MIN_VALUE;
+        int left = 0, right = height.length - 1;
+        while (left != right) {
+            if (height[left] < height[right]) {
+                res = Math.max(res, (right - left) * height[left]);
+                left++;
+            } else {
+                res = Math.max(res, (right - left) * height[right]);
+                right--;
+            }
+        }
+        return res;
+    }
+    @Test
+    public void test(){
+        int[] height = {1,8,6,2,5,4,8,3,7};
+        System.out.println(maxArea(height));
     }
 }

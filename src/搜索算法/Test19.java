@@ -52,7 +52,7 @@ public class Test19 {
 
     @Test
     public void test() {
-        int[] nums = {};
+        int[] nums = {1, 2, 3};
         System.out.println(subsets(nums));
     }
 }

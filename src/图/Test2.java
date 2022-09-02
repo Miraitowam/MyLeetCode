@@ -43,7 +43,8 @@ public class Test2 {
         int count = 0;
         //BFS
         while (!queue.isEmpty()) {
-            for (int i = 0; i < queue.size(); i++) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
                 //选出一门课出来分析
                 int curCourse = queue.poll();
                 //选课数量加一

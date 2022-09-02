@@ -24,15 +24,15 @@ public class Test11 {
         ArrayList<Integer> list = new ArrayList<>();
         int[] map = new int[26];
         char[] chars = s.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
+        for (int i = 0; i < chars.length; i++) {    //得到每一个字符最后出现的位置
             map[chars[i] - 'a'] = i;
         }
         int idx = 0;
         int last = -1;
         for (int i = 0; i < chars.length; i++) {
-            idx = Math.max(idx,map[chars[i]-'a']);
-            if (i == idx) {
-                list.add(idx-last);
+            idx = Math.max(idx, map[chars[i] - 'a']);
+            if (i == idx) { //说明现在正是最后一个字母
+                list.add(idx - last);
                 last = idx;
             }
         }

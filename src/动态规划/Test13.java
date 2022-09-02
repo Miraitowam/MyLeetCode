@@ -17,7 +17,6 @@ import java.util.Arrays;
 
 public class Test13 {
     public int lengthOfLIS(int[] nums) {
-        int len = nums.length;
         //dp_i表示i时最长递增数组的长度
         int[] dp = new int[nums.length];
         Arrays.fill(dp, 1);

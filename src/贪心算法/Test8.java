@@ -22,8 +22,8 @@ public class Test8 {
         }
         int index = -1;
         char[] s1 = s.toCharArray();
-        for (char c:s1) {
-            index = t.indexOf(c,index+1);
+        for (char c : s1) {
+            index = t.indexOf(c, index + 1);
             if (index == -1) {
                 return false;
             }
