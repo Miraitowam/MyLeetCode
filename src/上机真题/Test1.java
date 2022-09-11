@@ -14,7 +14,7 @@ public class Test1 {
         int taotai = 0, jinji = 0;
         int target = -1;
         for (int i = 0; i < scores.length; i++) {
-            taotai = i;
+            taotai = i + 1;
             jinji = scores.length - i - 1;
             if (taotai >= min && taotai <= max && jinji >= min && jinji <= max) {
                 target = scores[i];
